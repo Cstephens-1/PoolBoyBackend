@@ -17,3 +17,4 @@ run ApplicationController
 use OwnerController
 use CleanerController
 use PoolController
+use ReviewController
