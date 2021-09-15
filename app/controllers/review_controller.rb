@@ -22,15 +22,9 @@ class ReviewController < ApplicationController
 
     # delete
     delete "/reviews/:id" do
-        review = Review.find(params[:id]).to_json
+        review = Review.find(params[:id])
         review.destroy
         review.to_json
         
     end
 end
-
-# t.string :comment
-#       t.integer :rating
-#       t.belongs_to :owner
-#       t.belongs_to :cleaner
-#       t.belongs_to :pool
