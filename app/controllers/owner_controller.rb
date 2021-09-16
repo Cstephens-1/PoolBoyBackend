@@ -4,7 +4,11 @@ class OwnerController < ApplicationController
       end
 
       get "/owners/:id" do
-        Owner.find(params[:id]).to_json
+        puts "In: get 'owners/:id"
+        owner = Owner.find(params[:id])
+
+        owner_for_front_end= owner.to_json
+        owner_for_front_end
       end
 
 end
